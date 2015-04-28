@@ -450,16 +450,10 @@ article {
 .l-gi {
 	background-color: yellow;
 	float: left;
-	max-width: 50%;
+	max-width: 100%;
 	overflow: auto;
 }
 
 .l-gi:nth-child(even) {
 	background-color: green;
-}
-
-@media (max-width: 600px) {
-	.l-gi {
-		max-width: 100%;
-	}
 }
