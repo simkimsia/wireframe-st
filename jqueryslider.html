@@ -77,9 +77,9 @@
             //responsive code begin
             //you can remove responsive code if you don't want the slider scales while window resizes
             function ScaleSlider() {
-                var bodyWidth = document.body.clientWidth;
-                if (bodyWidth)
-                    jssor_slider1.$ScaleWidth(Math.min(bodyWidth, 1920));
+                var bodyHeight = document.body.clientHeight;
+                if (bodyHeight)
+                    jssor_slider1.$ScaleHeight(Math.min(bodyHeight, 750));
                 else
                     window.setTimeout(ScaleSlider, 30);
             }
@@ -94,7 +94,7 @@
     <!-- Jssor Slider Begin -->
     <!-- To move inline styles to css file/block, please specify a class name for each element. --> 
     <div id="slider1_container" style="position: relative; margin: 0 auto;
-        top: 0px; left: 0px; width: 1300px; height: 500px; overflow: hidden;">
+        top: 0px; left: 0px; width: 1920px; height: 750px; overflow: hidden;">
         <!-- Loading Screen -->
         <div u="loading" style="position: absolute; top: 0px; left: 0px;">
             <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block;
@@ -105,8 +105,8 @@
             </div>
         </div>
         <!-- Slides Container -->
-        <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 1300px;
-            height: 500px; overflow: hidden;">
+        <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 1920px;
+            height: 750px; overflow: hidden;">
             <div>
                 <img u="image" src="img/1920/machina-1.jpg" />
                 <!-- <div u="caption" t="NO" t3="RTT|2" r3="137.5%" du3="3000" d3="500" style="position: absolute; width: 445px; height: 300px; top: 100px; left: 600px;">
