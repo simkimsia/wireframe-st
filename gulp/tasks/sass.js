@@ -6,6 +6,7 @@ var autoprefixerConfig = require('../config').autoprefixer;
 
 gulp.task('sass', function() {
   return gulp.src(sassConfig.src)
+    .pipe($.plumber())
     .pipe($.sourcemaps.init())
     .pipe($.sass({
       includePaths: sassConfig.includePaths,

@@ -10,7 +10,8 @@ var readJSON = function(file) {
 
 // Compile Handlebars views into HTML views
 gulp.task('handlebars', function() {
-  return gulp.src(config.src)
+  return gulp.src([config.src, config.excludeSrc])
+    .pipe($.plumber())
     .pipe($.compileHandlebars(readJSON(config.data), {
       batch: config.batch,
       helpers: require(config.helpers),
