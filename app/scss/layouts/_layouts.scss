@@ -1,0 +1,56 @@
+// Layouts
+// =======
+
+.c-main {}
+
+.c-hero {
+  height: 50vh;
+  background-size: cover;
+  background-position: center center;
+
+  @include bp(500px) {
+    height: 70vh;
+  }
+
+  @include bp(700px) {
+    height: 80vh;
+  }
+
+  @include bp(900px) {
+    height: 90vh;
+  }
+}
+
+$susy: (columns: 12, debug: (image: show-columns), gutters: 0.25);
+
+.wrap {
+  @include container;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.o-block {
+  background: rgba(red, 0.25);
+  margin-top: gutter(12);
+
+  @include bp(500px h 500px) {
+    @include gallery(6 of 12);
+  }
+
+  @include bp(600px h 600px) {
+    @include gallery(4 of 12);
+  }
+
+  > a {
+    height: 250px;
+    display: block;
+    background-size: cover;
+    background-position: center center;
+    text-indent: -9999px;
+  }
+}
+
+
+
+
+
