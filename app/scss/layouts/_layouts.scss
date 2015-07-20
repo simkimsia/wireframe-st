@@ -1,0 +1,132 @@
+// Layouts
+// =======
+
+.c-menu {
+  @include cf;
+  // if want the bar to stay on window top
+  // use absolute
+  position: fixed;
+  left: 0;
+  right: 0;
+}
+
+.c-menu--first-bar {
+  @include cf;
+  // this fixes the background color
+  // and opacity at the same time
+  background: rgba(red, 0.25);
+  // this is so that the logo is centralized
+  text-align: center;
+  padding-top: 4px;
+  padding-bottom: 4px;
+
+  @include bp(480px) {
+    text-align: left;
+    // this fixes the height and vertical centralize problem
+    // at the same time
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+
+.c-menu--second-bar {
+  @include cf;
+  background: rgba(blue, 0.25);
+
+  @include bp(480px) {
+    display: none;
+  }
+}
+
+.c-web {
+  display: none;
+
+  @include bp(480px) {
+    display: block;
+  }
+}
+
+.c-web--right-navbar {
+  @extend .c-web;
+  float: right;
+}
+
+// 2nd bar for mobile is also translucent
+.c-sub-bar {
+  display: none;
+  @include cf;
+
+  &.is-open {
+    display: block;
+  }
+
+  a {
+    display: block;
+    float: left;
+    width: 50%;
+    text-align: center;
+  }
+}
+
+.is-open.c-sub-bar--lang {}
+
+.c-sub-bar--lang {
+  @extend .c-sub-bar;
+}
+
+.c-sub-bar--menu {
+  @extend .c-sub-bar;
+}
+
+.o-logo {
+  display: inline-block;
+}
+
+.c-main {}
+
+.c-hero {
+  height: 50vh;
+  background-size: cover;
+  background-position: center center;
+
+  @include bp(500px) {
+    height: 70vh;
+  }
+
+  @include bp(700px) {
+    height: 80vh;
+  }
+
+  @include bp(900px) {
+    height: 90vh;
+  }
+}
+
+$susy: (columns: 12, debug: (image: show-columns), gutters: 0.25);
+
+.wrap {
+  @include container;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.o-block {
+  background: rgba(red, 0.25);
+  margin-top: gutter(12);
+
+  @include bp(500px h 500px) {
+    @include gallery(6 of 12);
+  }
+
+  @include bp(600px h 600px) {
+    @include gallery(4 of 12);
+  }
+
+  > a {
+    height: 250px;
+    display: block;
+    background-size: cover;
+    background-position: center center;
+    text-indent: -9999px;
+  }
+}
