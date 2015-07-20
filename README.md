@@ -47,3 +47,4 @@ That's it!
 
 ## Detailed Usage 
 
+I'm working on a video tutorial to walk you through everything in here. Will update when it's done! 
