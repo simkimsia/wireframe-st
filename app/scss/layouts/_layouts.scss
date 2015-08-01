@@ -82,6 +82,16 @@
   display: inline-block;
 }
 
+a.svg {
+  display: inline-block;
+  position: relative;
+
+  > img {
+    display: block;
+    position: relative;
+  }
+}
+
 .c-main {}
 
 .c-hero {
