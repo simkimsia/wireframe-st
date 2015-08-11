@@ -90,6 +90,11 @@ a.svg {
     display: block;
     position: relative;
   }
+
+  > svg {
+    display: block;
+    position: relative;
+  }
 }
 
 .c-main {}
