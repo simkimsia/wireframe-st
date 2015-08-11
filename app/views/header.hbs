@@ -1,3 +1,9 @@
+
+<div style="display: none">
+	<svg> <symbol id="zhong1"> {{> cn-logo }} </symbol> </svg>
+	<svg> <symbol id="zhong2"> {{> cn-logo-2 }} </symbol> </svg>
+</div>
+
 <div class="c-menu">
 	<div class="c-menu--first-bar">
 		<div id="menubar" class="c-mobile--menu l-mobile-menu jsMobileMenu">
@@ -14,7 +20,11 @@
 		<div class="c-web--right-navbar">
 			<a href="#">BLOG</a>
 			<a href="#">ABOUT</a>
-			<a href="#" class="svg">{{> en-logo }}</a> | <a href="#" class="svg">{{> cn-logo }}</a>
+			<a href="#" class="svg"> {{> en-logo }}</a> | 
+			<a href="#" class="svg cn-logo"> 
+				<svg class="zhong1"><use xlink:href="#zhong1" x="0" y="0" /></svg>
+				<svg class="zhong2"><use xlink:href="#zhong2" x="0" y="0" /></svg>
+			</a>
 		</div>
 	</div>
 
@@ -28,4 +38,7 @@
 			<a href="#">中</a>
 		</div>
 	</div>
+
+
+	
 </div>

@@ -57,3 +57,28 @@
   height: 40px;
   @include bp(500px h 500px) {}
 }
+
+.cn-logo {
+  svg {
+    height: 40px;
+    width: 40px;
+  }
+
+  .zhong1 {
+    display: block;
+  }
+
+  .zhong2 {
+    display: none;
+  }
+}
+
+.cn-logo:hover {
+  .zhong1 {
+    display: none;
+  }
+
+  .zhong2 {
+    display: block;
+  }
+}
